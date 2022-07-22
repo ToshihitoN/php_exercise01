@@ -1,7 +1,7 @@
 <?php
-$num1 = '';
-$num2 = '';
-$num3 = '';
+$num1 = is_numeric('');
+$num2 = is_numeric('');
+$num3 = is_numeric('');
 $err_num = '';
 $answer ='';
 $word = '';
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($num1) || empty($num2)|| empty($num3)) {
         $err_num = '未入力です';
         }else{
-        $answer = $num1 + $num2 + $num3;
+        $answer = ($num1 + $num2 + $num3);
         $word = '合計値は' . "{$answer}" . 'です。';
         }
 }
